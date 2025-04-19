@@ -1,5 +1,5 @@
 @echo off
-REM One-time setup script for Mobile Kas App on Windows 11
+REM Laragon compatible installer and server starter for Mobile Kas App on Windows 11
 
 REM Check if composer is installed
 composer --version >nul 2>&1
@@ -29,7 +29,8 @@ REM Run database migrations
 echo Running database migrations...
 php artisan migrate
 
-echo Setup complete. You can now run the Laravel development server:
-echo php artisan serve
+REM Laragon typically uses Apache, so no need to start built-in server here
+echo Setup complete. You can now open Laragon and start Apache server.
+echo Place this project folder inside Laragon's www directory if not already.
 
 pause
